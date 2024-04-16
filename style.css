@@ -1,84 +1,77 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-:root{
+:root {
     --text-color: white;
     --bg-url: url(./imagensrocke/bg-mobile.jpg);
-    --stroke-color: rgba(255,255,255,0.5);
-    --surface-color: rgba(255,255,255,0.05);
-    --surface-color-hover: rgba(0,0,0,0.02);
-    --highlight-color: rgba(255,255,255,0.2);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(./imagensrocke/moon-stars.svg);
-
 }
 
-.light{
+.light {
     --text-color: black;
     --bg-url: url(./imagensrocke/bg-mobile-light.jpg);
-    --stroke-color: rgba(0,0,0,0.5);
-    --surface-color: rgba(0,0,0,0.05);
-    --surface-color-hover: rgba(0,0,0,0.02);
-    --highlight-color: rgba(0,0,0,0.1);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./imagensrocke/sun.svg);
 }
 
-
-body{
+body {
     background: var(--bg-url) no-repeat top center/cover;
     height: 100vh;
-
 }
-body *{
+
+body *,
+#profile p {
     font-family: "Inter", sans-serif;
     color: var(--text-color);
-
 }
 
 #container {
     width: 100%;
     max-width: 588px;
     margin: 56px auto 0px;
-    padding: 0  24px;
+    padding: 0 24px;
 }
 
-#profile{
+#profile {
     text-align: center;
     padding: 24px;
 }
 
-#profile img{
-    width: 150px;   
-    border-radius: 100%;
+#profile img {
+    width: 150px;
     height: 150px;
+    border-radius: 100%;
     border: 2px solid white;
 }
 
-.light #profile img{
-    width: 150px;   
-    border-radius: 100%;
-    height: 150px;
-    border: 2px solid  black;
+.light #profile img {
+    border: 2px solid black;
 }
 
-#profile p{
+#profile p {
     font-weight: 500;
     line-height: 24px;
     margin-top: 8px;
 }
 
 /* switch */
-
-#switch{
+#switch {
     position: relative;
     width: 64px;
     margin: 4px auto;
 }
 
-#switch  button{
+#switch button {
     width: 32px;
     height: 32px;
     background: white var(--switch-bg-url) no-repeat center;
@@ -89,15 +82,14 @@ body *{
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
-
-    animation: slide-back .2s;
+    animation: slide-back 0.2s;
 }
 
-.light #switch button{
-    animation: slide-in .4s forwards;
+.light #switch button {
+    animation: slide-in 0.4s forwards;
 }
 
-#switch span{
+#switch span {
     display: block;
     width: 64px;
     height: 24px;
@@ -107,8 +99,8 @@ body *{
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
 }
-/* links */
 
+/* links */
 ul {
     list-style: none;
     display: flex;
@@ -123,7 +115,7 @@ ul li a {
     align-items: center;
     padding: 16px 24px;
     background: var(--surface-color);
-    border: 1px solid rgb(255, 255,255, 0.5 );
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -135,17 +127,14 @@ ul li a {
 ul li a:hover {
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
-
 }
 
-/*social links*/
-
-#social-links{
+/* social links */
+#social-links {
     display: flex;
     justify-content: center;
     padding: 24px 0;
     font-size: 24px;
-
 }
 
 #social-links a {
@@ -157,40 +146,39 @@ ul li a:hover {
     border-radius: 50%;
 }
 
-#social-links a:hover{
+#social-links a:hover {
     background: var(--highlight-color);
-
 }
 
-footer{
+footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
 }
 
- @media(min-width: 700px){
-    :root{
+@media (min-width: 700px) {
+    :root {
         --bg-url: url(./imagensrocke/bg-desktop.jpg);
     }
-    .light{
-        --bg-url: url(/imagensrocke/bg-desktop-light.jpg);
+    .light {
+        --bg-url: url(./imagensrocke/bg-desktop-light.jpg);
     }
- }
+}
 
- @keyframes slide-in{
-    from{
+@keyframes slide-in {
+    from {
         left: 0;
     }
-    to{
+    to {
         left: 50%;
     }
- }
+}
 
- @keyframes slide-back{
-    from{
+@keyframes slide-back {
+    from {
         left: 50%;
     }
-    ro{
+    to {
         left: 0;
     }
- }
+}
